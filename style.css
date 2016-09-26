@@ -1,0 +1,59 @@
+header{
+	font-family: Lobster;
+	font-size: 20px;
+	background: linear-gradient(to bottom, #3E94D1	, #FFDA73);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+body{
+
+	background: #FFDA73;
+	margin: 0px;	
+}
+
+main{
+	font-family: Arial;
+	width: 700px;
+	padding: 10px;
+	margin: 10px auto;
+	box-shadow:  0 0 10px  #0A64A4;
+
+}
+
+
+.personal_info{
+	height: 200px;
+
+
+}
+
+#user_img{
+	float: right;
+	height: 200px;
+	border: 1px solid #000;
+}
+
+footer{
+	text-align: center;
+}
+
+#copy_img{
+	width: 150px;
+	height: 50px;
+	vertical-align: middle;
+	
+	
+}
+
+.soc{
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	
+}
+.social_icons{
+
+}
