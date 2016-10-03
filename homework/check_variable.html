@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Проверка типа переменной</title>
+</head>
+<body>
+    <h1>Проверка типа переменной</h1>
+
+    <form method="post" action="check_var.php">
+        <label for="variable"> <h3>Введите переменную *</h3></label>
+        <input type="text" name="variable" id="variable">
+        <input type="submit" name="send">
+</form>
+
+    <p><small><sup>*</sup> HTML-формы не передают целые, дробные числа или булевые переменные: они всегда передают строки.<br>
+        Для проверки является ли строка числом, используйте функцию <strong>is_numeric()</strong>.</small></p>
+</body>
+</html>
+
