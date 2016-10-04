@@ -34,9 +34,9 @@
         if($var1 == $var2)
             echo "Variable 1 EQ Variable 2";
         elseif ($var1 < $var2)
-            echo "Variable 1 LT Variable 2";
+            echo "$var1 LT $var2";
         elseif ($var1 > $var2)
-            echo "Variable 1 GT Variable 2";
+            echo "$var1 GT $var2";
         }
     ?>
     </div>
