@@ -22,3 +22,16 @@
 </form>
 </body>
 </html>
+
+<?php
+
+function getFormatedText()
+{
+    if (empty($_POST['text'])) die("Пусто!");
+
+    $text =$_POST['text'];
+    $text = array_reverse(explode(". ",$text));
+    $text = str_replace(".", "", $text);
+    print_r(implode(". ", $text) . ".");
+}
+?>
