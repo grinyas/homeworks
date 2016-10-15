@@ -25,13 +25,3 @@
 </form>
 </body>
 </html>
-
-<?php
-
-function getUniqWords()
-{
-
-}
-
-
-?>
