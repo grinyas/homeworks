@@ -21,27 +21,50 @@
     </div>
 </form>
 <div class="result">
-    <?php
-    $FILE_NAME = "text.txt";
 
-    if (file_exists($FILE_NAME)):
-        $handle = fopen($FILE_NAME, "r");
-        if (!empty(filesize($FILE_NAME)))
-            $content = fread($handle, filesize($FILE_NAME));
-            ?>
     <details>
         <summary>Оригинальный текст</summary>
-        <p><?= $content ?> </p>
+        <p><?= getOriginalText() ?> </p>
     </details>
-            <?php $content;
-        else:
-            echo "File empty!<br>";
-    endif;
-
-
-            ?>
+    <details>
+        <summary>Форматированый текст</summary>
+        <pre><?php print_r(getFormatedText()) ?> </pre>
+    </details>
 
 </div>
 </body>
 </html>
+
+<?php
+
+function getOriginalText()
+{
+    $FILE_NAME = "text.txt";
+    $content = "Файл пустой";
+
+    if (!file_exists($FILE_NAME))
+        exit;
+
+    $handle = fopen($FILE_NAME, "r");
+
+    if (!empty(filesize($FILE_NAME)))
+        $content = fread($handle, filesize($FILE_NAME));
+
+    return $content;
+}
+
+function getFormatedText()
+{
+
+    if (empty($_POST['length'])) die("Поле не заполнено!");
+    $length = $_POST['length'];
+    $text = str_word_count(getOriginalText(), 1);
+
+    $words = array_filter($text, function ($value) use ($length) {
+        return (mb_strlen($value) <= $length);
+    });
+    return $words;
+}
+
+?>
 
